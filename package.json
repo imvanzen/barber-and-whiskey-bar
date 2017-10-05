@@ -1,0 +1,22 @@
+{
+  "name": "barber-and-whiskey-bar",
+  "version": "1.0.0",
+  "description": "Official website for Barber",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imvanzen/barber-and-whiskey-bar.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imvanzen/barber-and-whiskey-bar/issues"
+  },
+  "homepage": "https://github.com/imvanzen/barber-and-whiskey-bar#readme"
+}

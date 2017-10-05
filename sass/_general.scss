@@ -92,3 +92,14 @@
 .clearfix:after {
     clear: both;
 }
+
+/* ==========================================================================
+   General classes
+   ========================================================================== */
+body {
+    background-image: url("../img/bg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+

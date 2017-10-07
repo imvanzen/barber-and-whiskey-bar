@@ -18,7 +18,8 @@
 .home-section {
     width: 100%;
     height: calc(100vh - 80px);
-
+    position: relative;
+    overflow: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -30,13 +31,12 @@
      */
     .intro {
         position: relative;
+        margin-bottom: 40px;
         width: 100%;
         height: 60vh;
 
         &-layer {
             position: absolute;
-            top: 50%;
-            left: 50%;
 
             -webkit-transition: all 50ms ease-in-out;
             -moz-transition: all 50ms ease-in-out;
@@ -46,18 +46,18 @@
         }
 
         &-title {
-            top: calc(50% - 110px);
+            top: calc(50% - 130px);
             left: 50%;
             @include translateElement(-50%, -50%);
         }
 
         &-frame {
-            top: 50%;
+            top: calc(50% - 20px);
             left: 50%;
             @include translateElement(-50%, -50%);
 
             &-accent {
-                top: calc(50% + 200px);
+                top: calc(50% + 180px);
                 left: 50%;
                 @include translateElement(-50%, -50%);
             }
@@ -65,25 +65,25 @@
 
         &-portrait {
             &-back {
-                top: calc(50% + 30px);
+                top: calc(50% + 10px);
                 left: 50%;
                 @include translateElement(-50%, -50%);
             }
 
             &-face {
-                top: calc(50% + 30px);
+                top: calc(50% + 10px);
                 left: 50%;
                 @include translateElement(-50%, -50%);
             }
 
             &-accent {
                 &-left {
-                    top: calc(50% + 10px);
+                    top: calc(50% - 10px);
                     left: calc(50% - 115px);
                     @include translateElement(-50%, -50%);
                 }
                 &-right {
-                    top: calc(50% + 10px);
+                    top: calc(50% - 10px);
                     left: calc(50% + 115px);
                     @include translateElement(-50%, -50%, scaleX(-1));
                 }
@@ -92,30 +92,30 @@
 
         &-sub {
             &-title {
-                top: calc(50% + 280px);
+                top: calc(50% + 260px);
                 left: 50%;
                 @include translateElement(-50%, -50%);
             }
 
             &-quote {
-                top: calc(50% + 340px);
+                top: calc(50% + 320px);
                 left: 50%;
                 @include translateElement(-50%, -50%);
             }
 
             &-accent {
-                top: calc(50% + 370px);
+                top: calc(50% + 350px);
                 left: 50%;
                 @include translateElement(-50%, -50%, scale(0.8));
 
                 &-left {
-                    top: calc(50% + 267px);
+                    top: calc(50% + 247px);
                     left: calc(50% - 120px);
                     @include translateElement(-50%, -50%, scaleX(-1));
                 }
 
                 &-right {
-                    top: calc(50% + 267px);
+                    top: calc(50% + 247px);
                     left: calc(50% + 120px);
                     @include translateElement(-50%, -50%);
                 }
@@ -210,9 +210,108 @@
         }
     }
 
-    @media all and (max-width: 1024px) and (min-width: 768px) {
-        .intro {
 
+    /*
+     * iPad
+     */
+    //@media all and (min-width: 1024px) and (max-width: 768px) {
+    //    .intro {
+    //
+    //    }
+    //}
+
+    /*
+     * iPhone vertical
+     */
+    @media all and (max-width: 767px) and (min-width: 276px) and (min-height: 500px) {
+        .intro {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            min-height: 100%;
+
+            &-title {
+                top: calc(50% - 130px);
+                left: 50%;
+                @include translateElement(-50%, -50%);
+            }
+
+            &-frame {
+                top: calc(50% - 20px);
+                left: 50%;
+                @include translateElement(-50%, -50%);
+
+                &-accent {
+                    top: calc(50% + 180px);
+                    left: 50%;
+                    @include translateElement(-50%, -50%);
+                }
+            }
+
+            &-portrait {
+                &-back {
+                    top: calc(50% + 10px);
+                    left: 50%;
+                    @include translateElement(-50%, -50%);
+                }
+
+                &-face {
+                    top: calc(50% + 10px);
+                    left: 50%;
+                    @include translateElement(-50%, -50%);
+                }
+
+                &-accent {
+                    &-left {
+                        top: calc(50% - 10px);
+                        left: calc(50% - 115px);
+                        @include translateElement(-50%, -50%);
+                    }
+                    &-right {
+                        top: calc(50% - 10px);
+                        left: calc(50% + 115px);
+                        @include translateElement(-50%, -50%, scaleX(-1));
+                    }
+                }
+            }
+
+            &-sub {
+                &-title {
+                    top: calc(50% + 260px);
+                    left: 50%;
+                    @include translateElement(-50%, -50%);
+                }
+
+                &-quote {
+                    top: calc(50% + 320px);
+                    left: 50%;
+                    @include translateElement(-50%, -50%);
+                }
+
+                &-accent {
+                    top: calc(50% + 350px);
+                    left: 50%;
+                    @include translateElement(-50%, -50%, scale(0.8));
+
+                    &-left {
+                        top: calc(50% + 247px);
+                        left: calc(50% - 120px);
+                        @include translateElement(-50%, -50%, scaleX(-1));
+                    }
+
+                    &-right {
+                        top: calc(50% + 247px);
+                        left: calc(50% + 120px);
+                        @include translateElement(-50%, -50%);
+                    }
+                }
+            }
+        }
+
+        .cta {
+            &_locations {
+                flex-direction: column;
+            }
         }
     }
 }

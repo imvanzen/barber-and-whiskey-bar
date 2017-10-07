@@ -197,6 +197,7 @@ body {
     left: -70px;
     width: 517px;
     height: 64px;
+    z-index: 6;
 
     -webkit-transform: scale(0.95) rotate(-20deg);
     -moz-transform: scale(0.95) rotate(-20deg);
@@ -204,18 +205,18 @@ body {
     -o-transform: scale(0.95) rotate(-20deg);
     transform: scale(0.95) rotate(-20deg);
 
-    -webkit-transition: all 500ms ease-in-out;
-    -moz-transition: all 500ms ease-in-out;
-    -ms-transition: all 500ms ease-in-out;
-    -o-transition: all 500ms ease-in-out;
-    transition: all 500ms ease-in-out;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
 
     &:hover {
-        -webkit-transform: scale(1) rotate(-20deg);
-        -moz-transform: scale(1) rotate(-20deg);
-        -ms-transform: scale(1) rotate(-20deg);
-        -o-transform: scale(1) rotate(-20deg);
-        transform: scale(1) rotate(-20deg);
+        -webkit-transform: scale(1.1) rotate(-22deg);
+        -moz-transform: scale(1.1) rotate(-22deg);
+        -ms-transform: scale(1.1) rotate(-22deg);
+        -o-transform: scale(1.1) rotate(-22deg);
+        transform: scale(1.1) rotate(-22deg);
     }
 }
 

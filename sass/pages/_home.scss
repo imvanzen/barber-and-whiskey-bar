@@ -46,54 +46,78 @@
         }
 
         &-title {
-            @include translateElement(-50%, calc(-50% - 110px));
+            top: calc(50% - 110px);
+            left: 50%;
+            @include translateElement(-50%, -50%);
         }
 
         &-frame {
+            top: 50%;
+            left: 50%;
             @include translateElement(-50%, -50%);
 
             &-accent {
-                @include translateElement(-50%, calc(-50% + 200px));
+                top: calc(50% + 200px);
+                left: 50%;
+                @include translateElement(-50%, -50%);
             }
         }
 
         &-portrait {
             &-back {
-                @include translateElement(-50%, calc(-50% + 30px));
+                top: calc(50% + 30px);
+                left: 50%;
+                @include translateElement(-50%, -50%);
             }
 
             &-face {
-                @include translateElement(-50%, calc(-50% + 30px));
+                top: calc(50% + 30px);
+                left: 50%;
+                @include translateElement(-50%, -50%);
             }
 
             &-accent {
                 &-left {
-                    @include translateElement(calc(-50% - 115px), calc(-50% + 10px));
+                    top: calc(50% + 10px);
+                    left: calc(50% - 115px);
+                    @include translateElement(-50%, -50%);
                 }
                 &-right {
-                    @include translateElement(calc(-50% + 115px), calc(-50% + 10px), scaleX(-1));
+                    top: calc(50% + 10px);
+                    left: calc(50% + 115px);
+                    @include translateElement(-50%, -50%, scaleX(-1));
                 }
             }
         }
 
         &-sub {
             &-title {
-                @include translateElement(-50%, calc(-50% + 280px));
+                top: calc(50% + 280px);
+                left: 50%;
+                @include translateElement(-50%, -50%);
             }
 
             &-quote {
-                @include translateElement(-50%, calc(-50% + 340px));
+                top: calc(50% + 340px);
+                left: 50%;
+                @include translateElement(-50%, -50%);
             }
 
             &-accent {
-                @include translateElement(-50%, calc(-50% + 370px), scale(0.8));
+                top: calc(50% + 370px);
+                left: 50%;
+                @include translateElement(-50%, -50%, scale(0.8));
 
                 &-left {
-                    @include translateElement(calc(-50% - 120px), calc(-50% + 267px), scaleX(-1));
+                    top: calc(50% + 267px);
+                    left: calc(50% - 120px);
+                    @include translateElement(-50%, -50%, scaleX(-1));
                 }
 
                 &-right {
-                    @include translateElement(calc(-50% + 120px), calc(-50% + 267px));
+                    top: calc(50% + 267px);
+                    left: calc(50% + 120px);
+                    @include translateElement(-50%, -50%);
                 }
             }
         }
@@ -106,16 +130,29 @@
         text-align: center;
 
         &_appointment {
+            position: relative;
             background-color: #ccb46e;
             display: inline-block;
             text-decoration: none;
             text-align: center;
             padding: 10px 20px 16px;
             margin: 0;
-            transition: all 500ms ease-in-out;
 
-            &:hover {
+            -webkit-transition: all 300ms ease-in-out;
+            -moz-transition: all 300ms ease-in-out;
+            -ms-transition: all 300ms ease-in-out;
+            -o-transition: all 300ms ease-in-out;
+            transition: all 300ms ease-in-out;
+
+            &:hover, &:focus {
                 background-color: lighten(#ccb46e, 20);
+                padding: 14px 22px 20px;
+            }
+
+            &:active {
+                background-color: darken(#ccb46e, 20);
+                padding: 14px 22px 20px;
+                margin-bottom: -6px;
             }
 
             &_label {

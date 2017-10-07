@@ -172,9 +172,52 @@ textarea {
 /* ==========================================================================
    General classes
    ========================================================================== */
+
+@font-face {
+    font-family: "Bernier Regular";
+    src: url("../fonts/bernier_regular-webfont.woff2") format("woff2"),
+    url("../fonts/bernier_regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     background-size: cover;
-    background: url("../img/bg.png") no-repeat fixed center center;
+    background: #000000 url("../img/bg.png") no-repeat fixed center center;
+}
+
+/*
+ * Face book badge
+ */
+.facebook-badge {
+    background: url("../img/facebook_badge.png") no-repeat center center;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -70px;
+    width: 517px;
+    height: 64px;
+    z-index: 6;
+
+    -webkit-transform: scale(0.95) rotate(-20deg);
+    -moz-transform: scale(0.95) rotate(-20deg);
+    -ms-transform: scale(0.95) rotate(-20deg);
+    -o-transform: scale(0.95) rotate(-20deg);
+    transform: scale(0.95) rotate(-20deg);
+
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+
+    &:hover {
+        -webkit-transform: scale(1.1) rotate(-22deg);
+        -moz-transform: scale(1.1) rotate(-22deg);
+        -ms-transform: scale(1.1) rotate(-22deg);
+        -o-transform: scale(1.1) rotate(-22deg);
+        transform: scale(1.1) rotate(-22deg);
+    }
 }
 
 /*
@@ -184,6 +227,7 @@ body {
     position: relative;
     width: 100%;
     height: 100vh;
+    z-index: 1;
 
     &_corner {
         position: fixed;

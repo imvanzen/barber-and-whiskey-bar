@@ -2,7 +2,180 @@
    Home section
    ========================================================================== */
 
+@mixin pseudoElementInit ($content: " ") {
+    content: $content;
+    display: block;
+}
+
+@mixin translateElement($x: 0, $y: 0, $cb: null) {
+    -webkit-transform: translate($x, $y) $cb;
+    -moz-transform: translate($x, $y) $cb;
+    -ms-transform: translate($x, $y) $cb;
+    -o-transform: translate($x, $y) $cb;
+    transform: translate($x, $y) $cb;
+}
+
 .home-section {
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 80px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+
+    /*
+     * Intro Animation, section, head, gentleman
+     */
+    .intro {
+        position: relative;
+        width: 100%;
+        height: 60vh;
+
+        &-layer {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            -webkit-transition: all 50ms ease-in-out;
+            -moz-transition: all 50ms ease-in-out;
+            -ms-transition: all 50ms ease-in-out;
+            -o-transition: all 50ms ease-in-out;
+            transition: all 50ms ease-in-out;
+        }
+
+        &-title {
+            @include translateElement(-50%, calc(-50% - 110px));
+        }
+
+        &-frame {
+            @include translateElement(-50%, -50%);
+
+            &-accent {
+                @include translateElement(-50%, calc(-50% + 200px));
+            }
+        }
+
+        &-portrait {
+            &-back {
+                @include translateElement(-50%, calc(-50% + 30px));
+            }
+
+            &-face {
+                @include translateElement(-50%, calc(-50% + 30px));
+            }
+
+            &-accent {
+                &-left {
+                    @include translateElement(calc(-50% - 115px), calc(-50% + 10px));
+                }
+                &-right {
+                    @include translateElement(calc(-50% + 115px), calc(-50% + 10px), scaleX(-1));
+                }
+            }
+        }
+
+        &-sub {
+            &-title {
+                @include translateElement(-50%, calc(-50% + 280px));
+            }
+
+            &-quote {
+                @include translateElement(-50%, calc(-50% + 340px));
+            }
+
+            &-accent {
+                @include translateElement(-50%, calc(-50% + 370px), scale(0.8));
+
+                &-left {
+                    @include translateElement(calc(-50% - 120px), calc(-50% + 267px), scaleX(-1));
+                }
+
+                &-right {
+                    @include translateElement(calc(-50% + 120px), calc(-50% + 267px));
+                }
+            }
+        }
+    }
+
+    /*
+     * CTA Appointment button, barber locations
+     */
+    .cta {
+        text-align: center;
+
+        &_appointment {
+            background-color: #ccb46e;
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
+            padding: 10px 20px 16px;
+            margin: 0;
+            transition: all 500ms ease-in-out;
+
+            &:hover {
+                background-color: lighten(#ccb46e, 20);
+            }
+
+            &_label {
+                color: #000000;
+                display: block;
+                font-family: "Bernier Regular", monospace;
+                font-size: 10px;
+
+                &--first {
+                    font-size: 20px;
+                }
+                &--second {
+                    font-size: 15px;
+                }
+            }
+        }
+
+        &_locations {
+            padding: 10px 20px 16px;
+            margin: 0;
+            display: flex;
+        }
+
+        &_location {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            padding: 15px 20px;
+
+            &_line {
+                display: block;
+                font-family: "Bernier Regular", monospace;
+
+                &--first,
+                &--third {
+                    color: #ebe1c9;
+                }
+
+                &--first {
+                    font-size: 28px;
+                }
+
+                &--second {
+                    color: #a5833a;
+                    font-size: 24px;
+                }
+
+                &--third {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    @media all and (max-width: 1024px) and (min-width: 768px) {
+        .intro {
+
+        }
+    }
 }

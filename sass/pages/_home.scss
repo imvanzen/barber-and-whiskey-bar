@@ -33,6 +33,7 @@
         position: relative;
         margin-bottom: 40px;
         width: 100%;
+        min-height: 600px;
         height: 60vh;
 
         &-layer {
@@ -46,18 +47,18 @@
         }
 
         &-title {
-            top: calc(50% - 130px);
+            top: calc(50% - 190px);
             left: 50%;
             @include translateElement(-50%, -50%);
         }
 
         &-frame {
-            top: calc(50% - 20px);
+            top: calc(50% - 80px);
             left: 50%;
             @include translateElement(-50%, -50%);
 
             &-accent {
-                top: calc(50% + 180px);
+                top: calc(50% + 120px);
                 left: 50%;
                 @include translateElement(-50%, -50%);
             }
@@ -65,25 +66,25 @@
 
         &-portrait {
             &-back {
-                top: calc(50% + 10px);
+                top: calc(50% - 50px);
                 left: 50%;
                 @include translateElement(-50%, -50%);
             }
 
             &-face {
-                top: calc(50% + 10px);
+                top: calc(50% - 50px);
                 left: 50%;
                 @include translateElement(-50%, -50%);
             }
 
             &-accent {
                 &-left {
-                    top: calc(50% - 10px);
+                    top: calc(50% - 70px);
                     left: calc(50% - 115px);
                     @include translateElement(-50%, -50%);
                 }
                 &-right {
-                    top: calc(50% - 10px);
+                    top: calc(50% - 70px);
                     left: calc(50% + 115px);
                     @include translateElement(-50%, -50%, scaleX(-1));
                 }
@@ -92,30 +93,30 @@
 
         &-sub {
             &-title {
-                top: calc(50% + 260px);
+                top: calc(50% + 200px);
                 left: 50%;
                 @include translateElement(-50%, -50%);
             }
 
             &-quote {
-                top: calc(50% + 320px);
+                top: calc(50% + 260px);
                 left: 50%;
                 @include translateElement(-50%, -50%);
             }
 
             &-accent {
-                top: calc(50% + 350px);
+                top: calc(50% + 280px);
                 left: 50%;
                 @include translateElement(-50%, -50%, scale(0.8));
 
                 &-left {
-                    top: calc(50% + 247px);
+                    top: calc(50% + 187px);
                     left: calc(50% - 120px);
                     @include translateElement(-50%, -50%, scaleX(-1));
                 }
 
                 &-right {
-                    top: calc(50% + 247px);
+                    top: calc(50% + 187px);
                     left: calc(50% + 120px);
                     @include translateElement(-50%, -50%);
                 }
@@ -209,16 +210,6 @@
             }
         }
     }
-
-
-    /*
-     * iPad
-     */
-    //@media all and (min-width: 1024px) and (max-width: 768px) {
-    //    .intro {
-    //
-    //    }
-    //}
 
     /*
      * iPhone vertical

@@ -128,6 +128,7 @@
      * CTA Appointment button, barber locations
      */
     .cta {
+        width: 100%;
         text-align: center;
 
         &_appointment {
@@ -179,12 +180,15 @@
             margin: 0;
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
         }
 
         &_location {
             text-align: center;
             display: flex;
-            flex: 1 1 25%;
+            flex: 1 1 auto;
             flex-direction: column;
             justify-content: center;
             align-items: center;
@@ -221,8 +225,12 @@
      */
     @media all and (max-width: 578px) {
         .intro {
-            margin-top: 80px;
+            margin-top: 50px;
             min-height: 100vw;
+            -webkit-transform: scale(0.9);
+            -moz-transform: scale(0.9);
+            -ms-transform: scale(0.9);
+            -o-transform: scale(0.9);
             transform: scale(0.9);
         }
     }
@@ -232,7 +240,17 @@
      */
     @media all and (max-width: 525px) {
         .intro {
+            -webkit-transform: scale(0.8);
+            -moz-transform: scale(0.8);
+            -ms-transform: scale(0.8);
+            -o-transform: scale(0.8);
             transform: scale(0.8);
+        }
+
+        .cta {
+            &_appointment {
+                width: 100%;
+            }
         }
     }
 
@@ -241,6 +259,10 @@
      */
     @media all and (max-width: 467px) {
         .intro {
+            -webkit-transform: scale(0.7);
+            -moz-transform: scale(0.7);
+            -ms-transform: scale(0.7);
+            -o-transform: scale(0.7);
             transform: scale(0.7);
         }
     }
@@ -251,6 +273,10 @@
     @media all and (max-width: 419px) {
         .intro {
             margin-top: 30px;
+            -webkit-transform: scale(0.6);
+            -moz-transform: scale(0.6);
+            -ms-transform: scale(0.6);
+            -o-transform: scale(0.6);
             transform: scale(0.6);
         }
     }
@@ -260,6 +286,10 @@
      */
     @media all and (max-width: 373px) {
         .intro {
+            -webkit-transform: scale(0.5);
+            -moz-transform: scale(0.5);
+            -ms-transform: scale(0.5);
+            -o-transform: scale(0.5);
             transform: scale(0.5);
         }
     }
@@ -269,6 +299,10 @@
      */
     @media all and (max-width: 323px) {
         .intro {
+            -webkit-transform: scale(0.4);
+            -moz-transform: scale(0.4);
+            -ms-transform: scale(0.4);
+            -o-transform: scale(0.4);
             transform: scale(0.4);
         }
     }

@@ -124,6 +124,10 @@
         }
     }
 
+    .intro-static {
+        display: none;
+    }
+
     /*
      * CTA Appointment button, barber locations
      */
@@ -224,32 +228,21 @@
      *
      */
     @media all and (max-width: 578px) {
-        .intro {
+        .intro-static {
+            display: inline-block;
             margin-top: 50px;
-            min-height: 100vw;
-            -webkit-transform: scale(0.9);
-            -moz-transform: scale(0.9);
-            -ms-transform: scale(0.9);
-            -o-transform: scale(0.9);
-            transform: scale(0.9);
+            margin-bottom: 50px;
+            max-width: 100%;
+            width: 100%;
         }
-    }
 
-    /*
-     *
-     */
-    @media all and (max-width: 525px) {
         .intro {
-            -webkit-transform: scale(0.8);
-            -moz-transform: scale(0.8);
-            -ms-transform: scale(0.8);
-            -o-transform: scale(0.8);
-            transform: scale(0.8);
+            display: none;
         }
 
         .cta {
             &_appointment {
-                width: 100%;
+                width: 90%;
             }
         }
     }
@@ -257,53 +250,16 @@
     /*
      *
      */
-    @media all and (max-width: 467px) {
-        .intro {
-            -webkit-transform: scale(0.7);
-            -moz-transform: scale(0.7);
-            -ms-transform: scale(0.7);
-            -o-transform: scale(0.7);
-            transform: scale(0.7);
-        }
+    @media all and (max-width: 525px) {
+
     }
 
     /*
      *
      */
     @media all and (max-width: 419px) {
-        .intro {
+        .intro-static {
             margin-top: 30px;
-            -webkit-transform: scale(0.6);
-            -moz-transform: scale(0.6);
-            -ms-transform: scale(0.6);
-            -o-transform: scale(0.6);
-            transform: scale(0.6);
-        }
-    }
-
-    /*
-     *
-     */
-    @media all and (max-width: 373px) {
-        .intro {
-            -webkit-transform: scale(0.5);
-            -moz-transform: scale(0.5);
-            -ms-transform: scale(0.5);
-            -o-transform: scale(0.5);
-            transform: scale(0.5);
-        }
-    }
-
-    /*
-     *
-     */
-    @media all and (max-width: 323px) {
-        .intro {
-            -webkit-transform: scale(0.4);
-            -moz-transform: scale(0.4);
-            -ms-transform: scale(0.4);
-            -o-transform: scale(0.4);
-            transform: scale(0.4);
         }
     }
 }

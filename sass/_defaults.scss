@@ -181,6 +181,12 @@ textarea {
     font-style: normal;
 }
 
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 body {
     background-size: cover;
     background: #000000 url("../img/bg.png") no-repeat fixed center center;
@@ -221,6 +227,21 @@ body {
 }
 
 /*
+ *
+ */
+@media all and (max-width: 578px) {
+    .facebook-badge {
+        left: -150px;
+        top: -15px;
+        -webkit-transform: scale(0.5) rotate(-22deg);
+        -moz-transform: scale(0.5) rotate(-22deg);
+        -ms-transform: scale(0.5) rotate(-22deg);
+        -o-transform: scale(0.5) rotate(-22deg);
+        transform: scale(0.5) rotate(-22deg);
+    }
+}
+
+/*
  * Window frame
  */
 .window-frame {
@@ -235,18 +256,30 @@ body {
         background-size: cover;
         width: 68px;
         height: 57px;
+        -webkit-transform: translateZ(0px);
+        -moz-transform: translateZ(0px);
+        -ms-transform: translateZ(0px);
+        -o-transform: translateZ(0px);
         transform: translateZ(0px);
 
         &--top {
             &-left {
                 top: 20px;
                 left: 20px;
+                -webkit-transform: rotate(180deg) scaleX(-1);
+                -moz-transform: rotate(180deg) scaleX(-1);
+                -ms-transform: rotate(180deg) scaleX(-1);
+                -o-transform: rotate(180deg) scaleX(-1);
                 transform: rotate(180deg) scaleX(-1);
             }
 
             &-right {
                 top: 20px;
                 right: 20px;
+                -webkit-transform: rotate(180deg);
+                -moz-transform: rotate(180deg);
+                -ms-transform: rotate(180deg);
+                -o-transform: rotate(180deg);
                 transform: rotate(180deg);
             }
         }
@@ -255,12 +288,20 @@ body {
             &-left {
                 left: 20px;
                 bottom: 20px;
+                -webkit-transform: rotate(0);
+                -moz-transform: rotate(0);
+                -ms-transform: rotate(0);
+                -o-transform: rotate(0);
                 transform: rotate(0);
             }
 
             &-right {
                 right: 20px;
                 bottom: 20px;
+                -webkit-transform: scaleX(-1);
+                -moz-transform: scaleX(-1);
+                -ms-transform: scaleX(-1);
+                -o-transform: scaleX(-1);
                 transform: scaleX(-1);
             }
         }
@@ -270,12 +311,20 @@ body {
         position: fixed;
         background: url("../img/frame_border.png") repeat-x center center;
         height: 10px;
+        -webkit-transform: translateZ(0px);
+        -moz-transform: translateZ(0px);
+        -ms-transform: translateZ(0px);
+        -o-transform: translateZ(0px);
         transform: translateZ(0px);
 
         &--left {
             width: calc(100vh - 240px);
             left: 30px;
             top: 50%;
+            -webkit-transform: translateX(-50%) rotate(-90deg);
+            -moz-transform: translateX(-50%) rotate(-90deg);
+            -ms-transform: translateX(-50%) rotate(-90deg);
+            -o-transform: translateX(-50%) rotate(-90deg);
             transform: translateX(-50%) rotate(-90deg);
         }
 
@@ -283,6 +332,10 @@ body {
             width: calc(100% - 240px);
             top: 30px;
             left: 50%;
+            -webkit-transform: translateX(-50%) rotate(0);
+            -moz-transform: translateX(-50%) rotate(0);
+            -ms-transform: translateX(-50%) rotate(0);
+            -o-transform: translateX(-50%) rotate(0);
             transform: translateX(-50%) rotate(0);
         }
 
@@ -290,6 +343,10 @@ body {
             width: calc(100vh - 240px);
             right: 30px;
             top: 50%;
+            -webkit-transform: translateX(50%) rotate(90deg);
+            -moz-transform: translateX(50%) rotate(90deg);
+            -ms-transform: translateX(50%) rotate(90deg);
+            -o-transform: translateX(50%) rotate(90deg);
             transform: translateX(50%) rotate(90deg);
         }
 
@@ -297,15 +354,82 @@ body {
             width: calc(100% - 240px);
             bottom: 30px;
             left: 50%;
+            -webkit-transform: translateX(-50%) rotate(180deg);
+            -moz-transform: translateX(-50%) rotate(180deg);
+            -ms-transform: translateX(-50%) rotate(180deg);
+            -o-transform: translateX(-50%) rotate(180deg);
             transform: translateX(-50%) rotate(180deg);
         }
     }
 
     &_content-mask {
         position: relative;
-        width: calc(100% - 80px);
-        height: calc(100vh - 80px);
-        top: 40px;
-        left: 40px;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        padding: 40px;
+    }
+}
+
+/*
+ *
+ */
+@media all and (max-width: 578px) {
+    .window-frame {
+
+        &_corner {
+
+            &--top {
+                &-left {
+                    top: 5px;
+                    left: 5px;
+                }
+
+                &-right {
+                    top: 5px;
+                    right: 5px;
+                }
+            }
+
+            &--bottom {
+                &-left {
+                    left: 5px;
+                    bottom: 5px;
+                }
+
+                &-right {
+                    right: 5px;
+                    bottom: 5px;
+                }
+            }
+        }
+
+        &_border {
+
+            &--left {
+                width: calc(100vh - 160px);
+                left: 10px;
+            }
+
+            &--top {
+                width: calc(100% - 180px);
+                top: 10px;
+            }
+
+            &--right {
+                width: calc(100vh - 160px);
+                right: 10px;
+            }
+
+            &--bottom {
+                width: calc(100% - 180px);
+                bottom: 10px;
+            }
+        }
+
+        &_content-mask {
+            padding: 20px;
+        }
     }
 }

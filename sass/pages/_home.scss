@@ -31,7 +31,7 @@
      */
     .intro {
         position: relative;
-        margin-bottom: 40px;
+        padding-bottom: 40px;
         width: 100%;
         min-height: 600px;
         height: 60vh;
@@ -232,13 +232,11 @@
 
         .intro-static {
             display: block;
-            margin-top: 50px;
-            margin-bottom: 50px;
+            padding-top: 50px;
+            padding-bottom: 50px;
             width: 100%;
             height: auto;
-            -webkit-box-sizing: content-box;
-            -moz-box-sizing: content-box;
-            box-sizing: content-box;
+            min-height: inherit;
 
             > img {
                 width: 100%;
@@ -262,7 +260,7 @@
      */
     @media all and (max-width: 419px) {
         .intro-static {
-            margin-top: 30px;
+            padding-top: 30px;
         }
     }
 }

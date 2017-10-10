@@ -228,6 +228,8 @@
      *
      */
     @media all and (max-width: 578px) {
+        height: calc(100vh - 40px);
+
         .intro-static {
             display: block;
             margin-top: 50px;

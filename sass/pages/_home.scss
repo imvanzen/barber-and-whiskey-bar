@@ -237,6 +237,11 @@
             -webkit-box-sizing: content-box;
             -moz-box-sizing: content-box;
             box-sizing: content-box;
+
+            > img {
+                width: 100%;
+                object-fit: scale-down;
+            }
         }
 
         .intro {

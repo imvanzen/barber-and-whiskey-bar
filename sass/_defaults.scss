@@ -406,6 +406,8 @@ body {
         }
 
         &_border {
+            background-size: 20px auto;
+            height: 5px;
 
             &--left {
                 width: calc(100vh - 160px);
@@ -429,7 +431,7 @@ body {
         }
 
         &_content-mask {
-            padding: 20px;
+            padding: 15px;
         }
     }
 }

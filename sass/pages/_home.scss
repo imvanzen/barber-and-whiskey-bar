@@ -20,6 +20,7 @@
     height: calc(100vh - 80px);
     position: relative;
     overflow: auto;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -239,9 +240,12 @@
      */
     @media all and (max-width: 578px) {
         height: calc(100vh - 40px);
+        display: block;
+        text-align: center;
 
         .intro-static {
             display: block;
+            margin: 0 auto;
         }
 
         .intro {
@@ -250,6 +254,7 @@
 
         .cta {
             &_appointment {
+                margin: 0 auto;
                 width: 90%;
             }
         }

@@ -229,11 +229,13 @@
      */
     @media all and (max-width: 578px) {
         .intro-static {
-            display: inline-block;
+            display: block;
             margin-top: 50px;
             margin-bottom: 50px;
-            max-width: 100%;
             width: 100%;
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
         }
 
         .intro {

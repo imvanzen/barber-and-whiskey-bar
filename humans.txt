@@ -3,11 +3,7 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
-
-# THANKS
-
-    <name>
+    Jakub Reczko -- Head of development -- @imvanzen
 
 # TECHNOLOGY COLOPHON
 

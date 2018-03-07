@@ -146,13 +146,13 @@
         width: 100%;
         text-align: center;
 
-        &_appointment {
+        .booksy-widget-button {
             position: relative;
-            background-color: #ccb46e;
+            background: #ccb46e !important;
             display: inline-block;
             text-decoration: none;
             text-align: center;
-            padding: 10px 20px 16px;
+            padding: 10px;
             margin: 0;
 
             -webkit-transition: all 100ms ease-out;
@@ -163,30 +163,25 @@
 
             &:hover, &:focus {
                 background-color: lighten(#ccb46e, 20);
-                margin-top: -4px;
-                margin-bottom: -4px;
-                padding: 14px 22px 20px;
+                margin-top: -2px;
+                margin-bottom: -2px;
+                padding: 14px;
             }
 
             &:active {
                 background-color: darken(#ccb46e, 20);
-                padding: 14px 22px 20px;
+                padding: 14px;
                 margin-top: -2px;
                 margin-bottom: -6px;
             }
 
-            &_label {
+            &:before {
+                content: "Make an appointment";
                 color: #000000;
                 display: block;
                 font-family: "Bernier Regular", monospace;
-                font-size: 10px;
-
-                &--first {
-                    font-size: 20px;
-                }
-                &--second {
-                    font-size: 15px;
-                }
+                font-size: 20px;
+                line-height: 39px;
             }
         }
 
@@ -209,6 +204,34 @@
             align-items: center;
             align-content: center;
             padding: 15px 20px;
+
+
+
+            &_social-links {
+                position: relative;
+                margin-top: 5px;
+
+                a {
+                    display: inline-block;
+                    width: 33px;
+                    height: 33px;
+                    margin: 5px;
+                    -webkit-transition: opacity 300ms;
+                    -moz-transition: opacity 300ms;
+                    -ms-transition: opacity 300ms;
+                    -o-transition: opacity 300ms;
+                    transition: opacity 300ms;
+                    opacity: 0.8;
+
+                    &:hover, &:focus {
+                        opacity: 1;
+                    }
+
+                    > img {
+                        width: 100%;
+                    }
+                }
+            }
 
             &_line {
                 display: block;

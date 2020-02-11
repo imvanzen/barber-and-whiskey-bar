@@ -1,0 +1,11 @@
+{
+    "GentlemanBarber": {
+        "ftpConfig": {
+            "remotePath": null,
+            "host": null,
+            "port": null,
+            "user": null,
+            "pass": null
+        }
+    }
+}

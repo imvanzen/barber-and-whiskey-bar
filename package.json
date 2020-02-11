@@ -20,11 +20,9 @@
   },
   "homepage": "https://github.com/imvanzen/barber-and-whiskey-bar#readme",
   "devDependencies": {
+    "config": "~3.2.5",
     "gulp": "~3.9.1",
+    "gulp-deploy-ftp": "~1.0.1",
     "gulp-sass": "~3.1.0"
-  },
-  "dependencies": {
-    "ftp": "^0.3.10",
-    "glob": "^7.1.6"
   }
 }

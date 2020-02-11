@@ -22,5 +22,9 @@
   "devDependencies": {
     "gulp": "~3.9.1",
     "gulp-sass": "~3.1.0"
+  },
+  "dependencies": {
+    "ftp": "^0.3.10",
+    "glob": "^7.1.6"
   }
 }
